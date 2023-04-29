@@ -9,8 +9,7 @@ jobs:
           - name: Checkout submodules
             run : git submodule update --init --recursive
           - name: Run unit test
-            run: ./unit-test.sh  
-
+            run: ./unit-test.sh
  full-test:
         container: cuaesd/aesd-autotest:unit-test
         runs-on: ubuntu-latest

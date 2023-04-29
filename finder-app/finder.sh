@@ -17,8 +17,8 @@ else
 	echo "Invalid path. Please insert a valir dir path"
 fi
 
-nlines=$(grep -r ${searchstr} * | wc -l)
-
-nfiles=$(grep -rl ${searchstr} * | wc -l)
-
+nlines=$(grep -r ${searchstr} ${filesdir} | wc -l)
+echo ${nlines}
+nfiles=$(grep -rl ${searchstr} ${filesdir} | wc -l)
+echo ${nfiles}
 echo "The number of files are ${nfiles} and the number of matching lines are ${nlines}"

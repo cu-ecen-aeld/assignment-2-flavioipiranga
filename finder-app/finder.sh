@@ -12,13 +12,12 @@ else
 fi
 
 if [ -d ${filesdir} ]; then
-	echo "Success"
+	nlines=$(grep -r ${searchstr} ${filesdir} | wc -l)
+	echo ${nlines}
+	nfiles=$(grep -rl ${searchstr} ${filesdir} | wc -l)
+	echo ${nfiles}
+	echo "The number of files are ${nfiles} and the number of matching lines are ${nlines}"
 else
 	echo "Invalid path. Please insert a valir dir path"
+	exit 1
 fi
-
-nlines=$(grep -r ${searchstr} ${filesdir} | wc -l)
-echo ${nlines}
-nfiles=$(grep -rl ${searchstr} ${filesdir} | wc -l)
-echo ${nfiles}
-echo "The number of files are ${nfiles} and the number of matching lines are ${nlines}"

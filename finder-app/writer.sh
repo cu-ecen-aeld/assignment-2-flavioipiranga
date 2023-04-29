@@ -3,11 +3,9 @@
 writefile=$1
 writestr=$2
 
-if [ $# -eq 2 ]; then
-        echo "Success"  
-else
-        echo "Missing parameters."
-        exit 1
+if [ $# -ne 2 ]; then
+	echo "Missing parameters."
+	exit 1
 fi
 
 dirpath=$(dirname ${writefile})

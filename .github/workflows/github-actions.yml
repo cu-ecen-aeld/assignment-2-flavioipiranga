@@ -1,5 +1,5 @@
 name: assignment-autotest-test
-on: [push]
+on: [workflow_dispatch]
 jobs:
   unit-test:
           #container: cuaesd/aesd-autotest:unit-test

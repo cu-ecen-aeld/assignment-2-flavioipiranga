@@ -3,7 +3,7 @@ on: [push]
 jobs:
   unit-test:
           #container: cuaesd/aesd-autotest:unit-test
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v2
           - name: Checkout submodules
@@ -12,7 +12,7 @@ jobs:
             run: ./unit-test.sh
   full-test:
           #container: cuaesd/aesd-autotest:assignment1
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v2
           - name: Checkout submodules
